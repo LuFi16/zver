@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="fonts/webfontkit/stylesheet.css">
+    <title>Zvěř-online</title>
+</head>
+<body>
+
+<header class="c-header">
+    <div class="c-header_img">
+        <h1 class="c-header_pagename">Zvěř online</h1>
+        <nav class="c-nav1">
+            <ul>
+                <li><a href="#">
+                    Přihlášení
+                </a></li>
+                <li><a href="#">
+                    Jazyk
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <nav class="c-nav2">
+        <ul>
+            <li><a href="#">
+                <img src="img/home.svg" alt="domů">
+                Domů
+            </a></li>
+            <li><a href="#">
+                <img src="img/deer-head.svg" alt="jelen">
+                Jeleni
+            </a></li>
+            <li><a href="#">
+                <img src="img/boar-head.svg" alt="divočák">
+                Divočáci
+            </a></li>
+            <li><a href="#">
+                <img src="img/duck-head.svg" alt="husa">
+                Husy
+            </a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="c-main">
+    <section class="c-sec-map">
+        <p>Webové stránky "Zvěř online" jsou výstupem pro veřejnost z vědecko-výzkumných portálů Jeleni online
+            a Divočáci online, které slouží ke sběru a zpracování dat telemetrického sledování zvěře.</p>
+        <img src="img/mapa3.png" alt="mapa" class="c-sec-map_map">
+    </section>
+
+    <section class="c-sec-map_options">
+        <form class="c-sec-map_options-form">
+            <div class="c-opt-how">
+                <h2>Způsob zobrazení</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="body" name="body" value="body">
+                        <label for="body">Body</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="trasa" name="trasa" value="trasa">
+                        <label for="trasa">Trasa</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="mcp" name="mcp" value="mcp">
+                        <label for="mcp">MCP Polygon (Quick Hull)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="heatmapa" name="heatmapa" value="heatmapa">
+                        <label for="heatmapa">Heatmapa pohybu</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="aktivity" name="aktivity" value="aktivity">
+                        <label for="aktivity">Aktivitová data</label>
+                    </li>
+                    <li>
+                        <label for="maxpocet">Maximální počet pozic: </label>
+                        <input type="number" id="maxpocet" name="maxpocet">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="c-opt-time">
+                <h2>Časové rozmezí</h2>
+                <div>
+                    <h3>Zobrazit za poslední:</h3>
+                    <label for="pocet">počet: </label>
+                    <select id="pocet" name="pocet">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="obdobi" class="c-opt-time_2ndfield-ident">období: </label>
+                    <select id="obdobi" name="obdobi">
+                        <option value="den">Den</option>
+                        <option value="tyden">Týden</option>
+                        <option value="mesic">Měsíc</option>
+                        <option value="rok">Rok</option>
+                    </select>
+
+                    <h3>Nebo zvolte přesné datum:</h3>
+                    <label for="datumod">od: </label>
+                    <input type="date" id="datumod" name="datumod">
+                    <label for="datumdo" class="c-opt-time_2ndfield-ident">do: </label>
+                    <input type="date" id="datumdo" name="datumdo">
+
+                    <h3>Čas:</h3>
+                    <div>
+                        <label for="casod">od: </label>
+                        <input type="date" id="casod" name="casod">
+                        <label for="casdo" class="c-opt-time_2ndfield-ident">do: </label>
+                        <input type="date" id="casdo" name="casdo">
+                        <span class="c-opt-time_form-btn">+</span>
+                        <span class="c-opt-time_form-btn">-</span>
+                    </div>
+                    <p class="c-note">ponechte prázdné pro výběr celých dnů</p>
+                </div>
+            </div>
+
+            <div class="c-opt-animals">
+                <h2>Výběr jedince</h2>
+                <div class="c-opt-animals_lists">
+                    <div>
+                        <h3>Jelen evropský</h3>
+                        <button>vybrat vše</button>
+                        <button>zrušit výběr</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alenka" name="alenka" value="alenka">
+                                <label for="alenka">Alenka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barka" name="barka" value="barka">
+                                <label for="barka">Barka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barunka" name="barunka" value="barunka">
+                                <label for="barunka">Barunka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beta" name="beta" value="beta">
+                                <label for="beta">Běta</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="bonifac" name="bonifac" value="bonifac">
+                                <label for="bonifac">Bonifác</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cecilka" name="cecilka" value="cecilka">
+                                <label for="cecilka">Cecilka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dorotka" name="dorotka" value="dorotka">
+                                <label for="dorotka">Dorotka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="kodl" name="kodl" value="kodl">
+                                <label for="kodl">Kódl</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="lenka" name="lenka" value="lenka">
+                                <label for="lenka">Lenka</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="liborka" name="liborka" value="liborka">
+                                <label for="liborka">Liborka</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Jelen evropský (Libavá)</h3>
+                        <button>vybrat vše</button>
+                        <button>zrušit výběr</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alenka2" name="alenka2" value="alenka2">
+                                <label for="alenka2">Alenka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barka2" name="barka2" value="barka2">
+                                <label for="barka2">Barka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barunka2" name="barunka2" value="barunka2">
+                                <label for="barunka2">Barunka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beta2" name="beta2" value="beta2">
+                                <label for="beta2">Běta2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="bonifac2" name="bonifac2" value="bonifac2">
+                                <label for="bonifac2">Bonifác2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cecilka2" name="cecilka2" value="cecilka2">
+                                <label for="cecilka2">Cecilka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dorotka2" name="dorotka2" value="dorotka2">
+                                <label for="dorotka2">Dorotka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="kodl2" name="kodl2" value="kodl2">
+                                <label for="kodl2">Kódl2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="lenka2" name="lenka2" value="lenka2">
+                                <label for="lenka2">Lenka2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="liborka2" name="liborka2" value="liborka2">
+                                <label for="liborka2">Liborka2</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Sika japonský</h3>
+                        <button>vybrat vše</button>
+                        <button>zrušit výběr</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alenka3" name="alenka3" value="alenka3">
+                                <label for="alenka3">Alenka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barka3" name="barka3" value="barka3">
+                                <label for="barka3">Barka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barunka3" name="barunka3" value="barunka3">
+                                <label for="barunka3">Barunka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beta3" name="beta3" value="beta3">
+                                <label for="beta3">Běta3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="bonifac3" name="bonifac3" value="bonifac3">
+                                <label for="bonifac3">Bonifác3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cecilka3" name="cecilka3" value="cecilka3">
+                                <label for="cecilka3">Cecilka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dorotka3" name="dorotka3" value="dorotka3">
+                                <label for="dorotka3">Dorotka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="kodl3" name="kodl3" value="kodl3">
+                                <label for="kodl3">Kódl3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="lenka3" name="lenka3" value="lenka3">
+                                <label for="lenka3">Lenka3</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="liborka3" name="liborka3" value="liborka3">
+                                <label for="liborka3">Liborka3</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Husa divoká</h3>
+                        <button>vybrat vše</button>
+                        <button>zrušit výběr</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alenka4" name="alenka4" value="alenka4">
+                                <label for="alenka4">Alenka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barka4" name="barka4" value="barka4">
+                                <label for="barka4">Barka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barunka4" name="barunka4" value="barunka4">
+                                <label for="barunka4">Barunka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beta4" name="beta4" value="beta4">
+                                <label for="beta4">Běta4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="bonifac4" name="bonifac4" value="bonifac4">
+                                <label for="bonifac4">Bonifác4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cecilka4" name="cecilka4" value="cecilka4">
+                                <label for="cecilka4">Cecilka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dorotka4" name="dorotka4" value="dorotka4">
+                                <label for="dorotka4">Dorotka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="kodl4" name="kodl4" value="kodl4">
+                                <label for="kodl4">Kódl4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="lenka4" name="lenka4" value="lenka4">
+                                <label for="lenka4">Lenka4</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="liborka4" name="liborka4" value="liborka4">
+                                <label for="liborka4">Liborka4</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Prase divoké</h3>
+                        <button>vybrat vše</button>
+                        <button>zrušit výběr</button>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alenka5" name="alenka5" value="alenka5">
+                                <label for="alenka5">Alenka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barka5" name="barka5" value="barka5">
+                                <label for="barka5">Barka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="barunka5" name="barunka5" value="barunka5">
+                                <label for="barunka5">Barunka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beta5" name="beta5" value="beta5">
+                                <label for="beta5">Běta5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="bonifac5" name="bonifac5" value="bonifac5">
+                                <label for="bonifac5">Bonifác5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cecilka5" name="cecilka5" value="cecilka5">
+                                <label for="cecilka5">Cecilka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="dorotka5" name="dorotka5" value="dorotka5">
+                                <label for="dorotka5">Dorotka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="kodl5" name="kodl5" value="kodl5">
+                                <label for="kodl5">Kódl5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="lenka5" name="lenka5" value="lenka5">
+                                <label for="lenka5">Lenka5</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="liborka5" name="liborka5" value="liborka5">
+                                <label for="liborka5">Liborka5</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" value="Zobrazit" class="c-sec-map_options-btn">
+        </form>
+    </section>
+
+    <section class="c-sec-data">
+        <h2>Dostupná data</h2>
+        <div class="c-sec-data_info">
+            <p>Celkem je k dispozici 1 633 918 pozic od 14. 2. 2009</p>
+            <p>Data šedým písmem v závorkách značí dostupnost aktivitových dat.</p>
+            <p>Nepřihlášeným uživatelům se data zobrazují se zpožděním 1 měsíce.</p>
+        </div>
+
+        <div class="c-sec-data_animals">
+            <h3>Husa divoká</h3>
+            <ul>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alžběta</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Alain</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Aldo</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alfréd</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+            </ul>
+
+            <h3>Jelen evropský</h3>
+            <ul>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alžběta</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Alain</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Aldo</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alfréd</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+                <li><span>Alain</span> (26) 779 pozic<br />30. 5. 2015 - 12. 8. 2015</li>
+                <li><span>Aldo</span> (17) 1331 pozic<br />9. 6. 2012 - 14. 4. 2013</li>
+                <li><span>Alfréd</span> (18) 1418 pozic<br />9. 6. 2012 - 16. 11. 2012</li>
+                <li><span>Alžběta</span> (47) 1098 pozic<br />16. 6. 2012 - 22. 1. 2013</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="c-sec-partners">
+        <h2>Partneři projektu</h2>
+        <div class="c-sec-partners_logos c-sec-partners_logos1">
+            <a href="#"><img src="img/logos/vls.png" alt="VLS"></a>
+            <a href="#"><img src="img/logos/jisopm_logo.png" alt="JISOPM"></a>
+            <a href="#"><img src="img/logos/logo_cil3.png" alt="Cíl 3"></a>
+            <a href="#"><img src="img/logos/eu_cz.png" alt="Evropská unie"></a>
+            <a href="#"><img src="img/logos/jelen-erb.jpg" alt="BJO"></a>
+        </div>
+
+        <h2>Autoři projektu</h2>
+        <div class="c-sec-partners_logos c-sec-partners_logos2">
+            <a href="#"><img src="img/logos/fld.png" alt="Fakulta lesnická a dřevařská ČZU"></a>
+            <a href="#"><img src="img/logos/pef.png" alt="Provozně ekonomická fakulta ČZU"></a>
+            <a href="#"><img src="img/logos/ldf.png" alt="Lesnická a dřevaská fakulta MU" id="c-sec-partners_logos2-ldf"></a>
+            <a href="#"><img src="img/logos/agris.png" alt="Agris" id="c-sec-partners_logos2-agris"></a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="c-footer">
+    <p>Vytvořila KIT PEF - Česká zemědělská univerzita v Praze © 2013, systém využívá GPSTR 1.0, GSH 1.0</p>
+    <p class="c-note">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+//COLORS
+
+$color-primary: rgb(169, 211, 38);
+$color-primary-hover-bcg: darken((rgb(169, 211, 38)), 15);
+$color-primary-hover-txt: #ffffff;
+
+$color-bcg-image-color: #75921a;
+
+$color-nav1-bcg: #000000;
+$color-nav1-txt: #ffffff;
+
+$color-body-line: #000000;
+$color-btn-small: rgb(219, 219, 219);
+$color-btn-small-hover-bgc: darken((rgb(219, 219, 219)), 15);
+$color-btn-small-hover-txt: #ffffff;
+
+$color-footer-bcg: #000000;
+$color-footer-txt: #ffffff;
+
+//SIZES
+
+$size-page: 60rem;
+$size-header-height: 20rem;
+$size-content-padding: 0 1.5rem;
+
+//FONTS
+
+body{
+  font-family: 'titillium_weblight', sans-serif;
+}
+
+input, select{
+  font-family: 'titillium_weblight', sans-serif;
+}
+
+.c-header_pagename{
+  font-family: 'titillium_websemibold', sans-serif;
+  font-size: 62px;
+  letter-spacing: 10px;
+}
+
+.c-nav1 ul li a, .c-nav2 ul li a{
+  font-family: 'titillium_webregular', sans-serif;
+}
+
+.c-nav1 ul li a{
+  font-size: 16px;
+}
+
+.c-nav2 ul li a{
+  font-size: 20px;
+}
+
+.c-main h2{
+  font-family: 'titillium_webregular', sans-serif;
+  font-size: 20px;
+}
+
+.c-main h3{
+  font-family: 'titillium_webregular', sans-serif;
+  font-size: 18px;
+}
+
+.c-note{
+  font-size: 12px;
+}
+
+.c-sec-map_options-btn{
+  font-family: 'titillium_websemibold', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}

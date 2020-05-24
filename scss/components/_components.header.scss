@@ -1,0 +1,86 @@
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+
+.c-header{
+  width: 100%;
+  text-align: center;
+}
+
+.c-header_img{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/les-upravy.png") no-repeat center $color-bcg-image-color;
+  background-size: cover;
+  height: $size-header-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.c-header_pagename{
+  text-transform: uppercase;
+  color: $color-primary;
+  margin: 6rem 0 0 0;
+}
+
+.c-nav1, .c-nav2 {
+  ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0 auto;
+    width: $size-page;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    text-transform: uppercase;
+  }
+}
+
+.c-nav1{
+  background-color: transparentize($color-nav1-bcg, 0.5);
+  width: 100%;
+  ul{
+    justify-content: flex-end;
+    li{
+      padding: 1rem 0;
+      a{
+        color: $color-nav1-txt;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
+
+.c-nav2{
+  background-color: $color-primary;
+  ul{
+    justify-content: space-evenly;
+    width: $size-page;
+    li{
+      width: 25%;
+      a{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        text-align: center;
+        img {
+          width: 4rem;
+          height: auto;
+          padding-bottom: 1rem;
+          margin: auto;
+        }
+      }
+      a:hover {
+        background-color: $color-primary-hover-bcg;
+        color: $color-primary-hover-txt;
+      }
+    }
+  }
+}

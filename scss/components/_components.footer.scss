@@ -1,0 +1,15 @@
+
+.c-footer{
+  text-align: center;
+  padding: 1rem;
+  background-color: transparentize($color-footer-bcg, 0.1);
+  color: $color-footer-txt;
+  p{
+    margin: 0;
+    padding: 0;
+    a{
+      color: $color-primary;
+    }
+  }
+
+}
